@@ -1,0 +1,257 @@
+@import url(main.css);
+
+.wrap{
+    background: #1B1A1A;
+}
+.header{
+    background: #1B1A1A;
+}
+
+
+.contentWrap{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top:8vh;
+}
+.content{
+    min-width: 1170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.leftContent{
+    min-width: 700px;
+    width: 48vw;
+    display: flex;
+    flex-wrap: wrap;
+}   
+.contentItem{
+    background: #E4F9FF;
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+.userInfo{
+    width: 24.5vw;
+    min-height: 250px;
+    max-width: 470px;
+    max-height: 250px;
+    min-width: 300px;
+}
+.userHeader{
+    display: flex;
+    margin-left: 2vw;
+}
+.userInfo h2, .delivery h2, .cards h2, .discount h2, .purchases h2, .moneySpent h2, .purchasesHistory h2{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    color: #000000;
+    margin-left: 2vw;
+}
+.userInfo p, .delivery p, .cards p, .discount p, .purchases p, .moneySpent p, .purchasesHistory p{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #103A3D;
+    margin-left: 1vw;
+}
+.delivery{
+    width: 19.3vw;
+    min-width: 300px;
+    min-height: 250px;
+    max-width: 370px;
+    max-height: 250px;
+    margin:0 30px 0 30px;
+    display: flex;
+    flex-flow: column;
+}
+.delivery img{
+    align-self: flex-end;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+}
+.discount{
+    width: 14vw;
+    min-height: 456px;
+    min-width: 300px;
+    max-width: 270px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+.delivery p{
+    margin-left: 2vw;
+}
+.discount p{
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.rolexSilverIcon{
+    position: relative;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+.rolexSilverIcon:after{
+    content: 'до 30.03.2022';
+    top: 100px;
+    left: 80px;
+    position: absolute;
+    width: 150px;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    
+}
+.rolexSilverIcon::before{
+    content: '-5% discount';
+    left: 80px;
+    position: absolute;
+    width: 150px;
+    display: block;
+    color: #F14A4A;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+.rolexNightIcon{
+    position: relative;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+.rolexNightIcon::after{
+    content: 'до 16.04.2022';
+    top: 100px;
+    left: 80px;
+    position: absolute;
+    width: 150px;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    
+}
+.rolexNightIcon::before{
+    content: '-7% discount';
+    left: 80px;
+    position: absolute;
+    width: 150px;
+    display: block;
+    color: #F14A4A;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+.contentItemLine{
+    margin-top: 3vh;
+    border: 1px solid #103A3D;
+    width: 80%;
+}
+.cards{
+    position: relative;
+    width: 24.5vw;
+    min-width: 300px;
+    min-height:176px;
+    max-width: 470px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+.paymentCard{
+    display: flex;
+    align-items: center;
+}
+.paymentCard p{
+    margin: 5px 0px 0px 2vw; 
+}
+.cards img{
+    margin-left: 4vw;
+}
+.purchases{
+    display: flex;
+    flex-flow: column;
+    max-width: 370px;
+    width: 19.3vw;
+    min-height:176px;
+    min-width: 300px;
+    margin:30px 30px 0px 30px;
+}
+.purchases h2{
+    margin-left: 40px;
+    margin-bottom: 0px;
+}
+.purchases p{
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.purchases img{
+    align-self: flex-end;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+}
+.bottomContent{
+    display: flex;
+}
+.purchasesHistory{
+    width: 39vw;
+    min-height: 176px;
+    min-width: 300px;
+    max-width: 670px;
+    margin-top: 30px;
+}
+.moneySpent{
+    min-width: 300px;
+    width: 28vw;
+    max-width: 470px;
+    min-height: 176px;
+    margin:30px 0px 0px 30px;
+}
+@media screen and (max-width:1489px) {
+    .discount{
+        display: none;
+    }
+    .leftContent{
+        width: 50vw;
+    }
+}
+@media screen and (max-width:1440px) {
+    .leftContent{
+        justify-content: center;
+    }
+    .content{
+        flex-flow: column;
+        align-items: center ;
+    }
+    .userHeader p, .userInfo p, .delivery p, .paymentCard p, .purchasesHistory p, .moneySpent p{
+        font-size: 20px;
+    }
+    .delivery h2, .cards h2, .purchases h2, .purchasesHistory h2, .moneySpent h2{
+        font-size: 24px;
+    }
+
+}
+@media screen and (max-width:768px) {
+    .leftContent{
+        flex-flow: column;
+        margin-left: 34.5%;
+    }
+    .purchases{
+        margin: 30px 0px 30px 0px;
+    }
+    .bottomContent{
+        flex-flow: column;
+    }
+    .moneySpent{
+        margin: 30px 0px 0px 0px;
+    }
+    .delivery{
+        margin: 30px 0px 0px 0px;
+    }
+    .purchasesHistory{
+        margin-top: 0;
+    }
+}

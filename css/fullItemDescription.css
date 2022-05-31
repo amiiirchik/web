@@ -1,0 +1,176 @@
+@import url(main.css);
+
+.wrap{
+    background: #1B1A1A;
+}
+.header{
+    background: #1B1A1A;
+}
+.contentWrap{
+    background: #121212;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+}
+.contentWrap h2{
+    margin-top: 10vh;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    text-align: center;  
+    color: #E4F9FF;
+}
+.labelLine{
+    width: 16vw;
+    height: 3px;
+    background: #E4F9FF;
+}
+.mainInfoWrap{
+    display: flex;
+    margin-top: 10vh;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.mainInfo{
+    width: 27vw;
+    min-width: 290px;
+    display: flex;
+    flex-flow: column;
+}
+.mainInfoWrap img{
+    width: 20vw; 
+    margin-right: 10vw;
+    height: 75%;
+    min-width: 245px;
+    max-height:680px ;
+}
+.mainInfo h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vw;
+    color: #E4F9FF;
+    text-align: center;  
+}
+.mainInfoPrice{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: #53D9FF;
+    text-align: right;
+    margin: 0 2vw 0 0;
+}
+.buy{
+    margin-top: 2vh;
+    margin-bottom: 9vh;
+    align-self: center;
+} 
+.line{
+    width: 100%;
+    height: 3px;
+    background: #E4F9FF;
+}
+.description{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.05vw;
+    text-align: right;
+    color: #E4F9FF;
+    margin-right: 2vw;
+    line-height: 1.4em;
+}
+.modelMechanism{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.characteristics{
+    display: flex;
+    margin-top: 5vh;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.characteristic{
+    width: 20vw;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    margin-top: 2vh;
+    min-width: 240px;
+}
+.characteristic img{
+    width: 20vw;
+    min-width: 240px;
+}
+.characteristic h1{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25vw;
+    color: #E4F9FF;
+    margin-left: 0;
+}
+.characteristic h3{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.05vw;
+    color: #E4F9FF;
+    margin-left: 0;
+}
+.characteristic p{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.95vw;
+    color: #E4F9FF;
+    margin: 0;
+}
+.galleryItem2{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.gallery{
+    flex-wrap: wrap;
+    margin-top: 8vh;
+    margin-bottom: 13vh;
+    width: 65vw;
+    display: flex;
+    justify-content: center;
+}
+.gallery img{
+    width: 16.5vw;
+    min-width: 240px;
+    margin-top: 2vw;
+}
+@media screen and (max-width:1024px) {
+    .mainInfo h1{
+        font-size: 16px;
+    }
+    .description{
+        font-size: 12px;
+    }
+    .mainInfoPrice{
+        font-size: 16px;
+    }
+    .contentWrap h2{
+        font-size: 16px;
+    }
+    .characteristic h1{
+        font-size: 14px;
+    }
+    .characteristic h3{
+        font-size: 14px;
+    }
+    .characteristic p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:594px) {
+    .mainInfoWrap img{
+        margin-left:10vw;
+    }
+}

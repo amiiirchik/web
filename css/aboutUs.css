@@ -1,0 +1,59 @@
+@import url(main.css);
+.wrap{
+    background:#1B1A1A;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.content{   
+    width: 65vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.createDate{
+    align-self: flex-start;
+    padding-top: 7vh;
+}
+.content p{
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    color: #F3FCFF;
+    margin: 3.5vh 0vw 3.5vh 0vw;
+}
+.content span{
+    font-size: 24px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    color: #F3FCFF;
+}
+iframe{
+    margin: 5vh 0vw 5vh 0vw;
+    width: 80%;
+}
+
+@media screen and (max-width:1439px) {
+    .content p{
+        font-size: 16px;
+    }
+    .content span{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:768px) {
+    .content p{
+        font-size: 14px;
+    }
+    .content span{
+        font-size: 18px;
+    }
+    .content{   
+        width: 90vw;
+    }
+    iframe{
+        width: 90%;
+    }
+}

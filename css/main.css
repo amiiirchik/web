@@ -1,0 +1,979 @@
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1B1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 1920px 7px rgba(205, 243, 255, 0.9);
+    border-radius: 3px;
+}
+body,html{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+.wrap{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.banner{
+    width: 100%;
+    background-image: url('../images/background.png');
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-bottom: 34vh;
+}
+.header{
+    margin-top: 1vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo{
+    max-width: 200px;
+    width: 10vw;
+    cursor: pointer;
+}
+.leftNav, .rightNav{
+    list-style-type: none;
+}
+.leftNav li{
+    margin-bottom: 10px;
+}
+.leftNav li, .rightNav li{
+    float: left;
+}
+.watches{
+    margin-left: 3vw;
+}
+.catalog{
+    margin-left: 11vw;
+}
+.catalog:hover .subMenu{
+    transition: 0.6s;
+    display: block;
+    animation: show 1s;
+    animation-fill-mode: forwards;
+}
+.subMenu{
+    opacity: 0;
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    padding-left: 0.5vw;
+    transition: 0.6s;
+}
+.subMenu li{
+    text-align: stretch;
+    margin-top: 1vh;
+    float: none;
+}
+.subMenu a{
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25vw;
+    color: #FFFFFF;
+}
+.leftNav a, .rightNav a{
+    color: #FFFFFF;
+    font-size: 1.25vw;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    transition: 0.6s;
+}
+.leftNav a:hover, .rightNav a:hover{
+    transition: 0.6s;
+    color: #CDF3FF;
+    text-shadow: 3px 3px 8px #CDF3FF;
+}
+
+.aboutUs{
+    margin-right: 7vw;
+}
+.shopBag, .geoLocation, .user{
+    transition: 0.2s ease-in-out;
+    fill: #FFFFFF;
+    margin-right: 2vw;
+    width: 2vw;
+    min-height: 30px;
+    max-height: 40px;
+    min-width: 30px;
+    max-width: 40px;
+}
+.navIcons a:hover .shopBag, .navIcons a:hover .geoLocation, .navIcons a:hover .user{
+    fill: #CDF3FF;
+}
+.user{
+    cursor: pointer;
+}
+.menu{
+    display: none;
+}
+.banner h1{
+    opacity: 1;
+    position: relative;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 32vh;
+    color: #CDF3FF;
+    font-size: 2vw;
+    font-family: 'Roboto', sans-serif;
+    animation: appearLeft 1s;
+}
+.watchCollectionButton{
+    opacity: 1;
+    position: relative;
+    animation: appearRight 1s;
+}
+.sendToModels{
+    text-decoration: none;
+}
+.watchCollectionButton, .buy, .orderButton{
+    transition: 0.6s;
+    position: relative;
+    width: 17vw;
+    height: 6vh;
+    min-height: 54px;
+    max-height: 80px;
+    min-width: 160px;
+    margin-top: 3vh;
+    color: #FFFFFF;
+    font-size: 1.1vw;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.watchCollectionButton:hover, .buy:hover, .orderButton:hover{
+    color: #CDF3FF;
+    transition: 0.6s;
+    background:rgba(255, 255, 255, 0.05);
+}
+.watchCollectionButton::before, .buy::before, .orderButton::before{
+    content: "";
+    transition: 0.6s;
+    display: block;
+    width: 4.9vw;
+    height: 3.5vh;
+    min-height: 25px;
+    max-height: 78px;
+    min-width: 60px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top: 4px solid #CDF3FF;
+    border-left: 4px solid #CDF3FF;
+}
+.watchCollectionButton::after, .buy::after, .orderButton::after{
+    content: "";
+    transition: 0.6s;
+    display: block;
+    width: 4.9vw;   
+    height: 3.5vh;
+    min-height: 25px;
+    max-height: 78px;
+    min-width: 60px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-right: 4px solid #CDF3FF;
+    border-bottom: 4px solid #CDF3FF;
+}
+.watchCollectionButton:hover::after, .buy:hover::after, .orderButton:hover::after{
+    content: "";
+    display: block;
+    width: 98%;
+    height: 93%;
+    transition: 0.6s;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-right: 4px solid #CDF3FF;
+    border-bottom: 4px solid #CDF3FF;
+}
+.watchCollectionButton:hover::before, .buy:hover::before, .orderButton:hover::before{
+    content: "";
+    display: block;
+    width: 98%;
+    height: 93%;
+    transition: 0.6s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top: 4px solid #CDF3FF;
+    border-left: 4px solid #CDF3FF; 
+}
+
+.infoblockWrap{
+    background:#1B1A1A;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.infoblockContent{
+    width: 60vw;
+    display: flex;
+    flex-flow: column;
+}
+.infoblockContent h1{
+    margin-top: 7vh;
+    font-weight: 400;
+    color: #CDF3FF;
+    font-size: 1.35vw;
+    font-family: 'Roboto', sans-serif;
+}
+.infoblockContent p{
+    color: #FFFFFF;
+    font-size: 1.1vw;
+    font-family: 'Roboto', sans-serif;
+}
+.infoblockContent a{
+    transition: ease-in-out 0.6s;
+    color: #CDF3FF;
+    font-size: 1.3vw;
+    font-family: 'Roboto', sans-serif;
+    right: auto;
+    align-self: flex-end;
+    margin-top: 4vh;
+    margin-bottom: 8vh;
+}
+.infoblockContent a:hover{
+    color: #78E1FF;
+}
+
+.newModelsWrap{
+    background: #121212;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-bottom:14vh;
+}
+.newModelsWrap h1{
+    margin-top: 6vh;
+    margin-bottom: 9vh;
+    font-weight: 400;
+    color: #CDF3FF;
+    font-size: 1.7vw;
+    font-family: 'Roboto', sans-serif;
+}
+.newModels{
+    display: flex;
+    justify-content: center;
+}
+.newModel{
+    cursor: pointer;
+    position: relative;
+    width: 20vw;
+    min-width: 230px;
+    background:#E4F9FF;
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.7s;
+}
+.newModel::before, .bestModel::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    bottom: 0;
+    background:rgba(7, 8, 9, 0.8);
+    transition: 0.7s;
+}  
+.newModel:hover::before, .bestModel:hover::before{
+    transition: 0.7s;
+    height: 100%;
+}  
+.newModel::after, .bestModel::after{
+    content: "Производитель - Tissot Модель - Silver Quartz";
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height: 4.4vh;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.75s;
+    color: #CDF3FF;
+    font-size: 18px;
+}  
+.newModel:hover::after, .bestModel:hover::after{
+    bottom: 42%;
+    opacity: 1;
+    transition: 0.75s;
+}  
+.newModel:hover, .bestModel:hover{
+    box-shadow: 0px 6px 15px rgba(7, 8, 9, 0.9);
+} 
+.newModel2{
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+.newModel img{
+    width: 14vw;
+    min-width: 230px;
+    max-height: 450px;
+    max-width: 320px;
+}
+
+.bestModelsWrap{
+    background: #121212;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-bottom:10vh;
+}
+.bestModelsWrap h1{
+    margin-top: 6vh;
+    margin-bottom: 9vh;
+    font-weight: 400;
+    color: #CDF3FF;
+    font-size: 1.85vw;
+    font-family: 'Roboto', sans-serif;
+}
+.bestModels{
+    margin-top: -12vh;
+    display: flex;
+    align-items: center;
+}
+.bestModel{
+    cursor: pointer;
+    position: relative;
+    width: 18vw;
+    min-width: 280px;
+    background:#E4F9FF;
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bestModel2{
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    margin-top: 20vh;
+}
+.bestModel img{
+    width: 14vw;
+    min-width: 240px;
+}
+.leftArrow{
+    margin-right:2vw ;
+    cursor: pointer;
+}
+.rightArrow{
+    margin-left:2vw ;
+    cursor: pointer;
+}
+.sliderPoints{
+    display: flex;
+    justify-content: space-between;
+    width: 12vw;
+    margin-top: 6vh;
+}
+.sliderPoint{
+    width: 1.1vw;
+    height: 1.1vw;
+    border-radius: 50%;
+    background:#E4F9FF;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.sliderPoint:hover{
+    transition: 0.4s;
+    background:#78E1FF;
+}
+.active{
+    background:#78E1FF;
+}
+.rightArrow img, .leftArrow img{
+    transition: 0.6s;
+}
+/* .rightArrow img:hover{
+    margin-left: 2vw;
+    transition: 0.6s;
+}
+
+.leftArrow img:hover{
+    margin-right: 2vw;
+    transition: 0.6s;
+}  */
+
+.lowVisible{
+    opacity: 0.5;
+}
+
+
+.partnersWrap{
+    background: #1B1A1A;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-bottom:10vh;
+}
+.partnersWrap h1{
+    margin-top: 7vh;
+    margin-bottom: 2vh;
+    font-weight: 400;
+    color: #CDF3FF;
+    font-size: 1.6vw;
+    font-family: 'Roboto', sans-serif;
+}
+.partners{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.partners img{
+    cursor: pointer;
+    margin:2vw;
+    width: 9vw;
+    min-width: 100px;
+}
+
+.twitter, .instagram, .facebook, .google, .pinterest{
+    fill: #CDF3FF;
+    transition: ease-in-out 0.2s all;
+    width: 50px;
+    height: 50px;
+    margin:2vw;
+    cursor: pointer;
+}
+.socMedias div:hover .twitter,.socMedias div:hover .instagram, .socMedias div:hover .facebook, .socMedias div:hover .google, .socMedias div:hover .pinterest{
+    fill: #78E1FF;  
+    margin-top: 1.3vw;
+}
+.socMediasWrap{
+    background: #121212;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.socMediasWrap h1{
+    margin-top: 5vh;
+    font-weight: 400;
+    color: #CDF3FF;
+    font-size: 1.55vw;
+    font-family: 'Roboto', sans-serif;
+}
+.socMedias{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 2vh;
+}
+
+.footerWrap{
+    width: 100%;
+    background: #0C0C0C;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.footer{
+    margin-top: 8vh;
+    margin-bottom: 10vh;
+    margin-left: 5.5vw;
+    width: 75vw;
+    display: flex;
+    justify-content: space-between;
+}
+.footerNav{
+    list-style-type: none;
+}
+.footerNav li{
+    margin-top: 3vh;
+    text-align: center;
+}
+.footerNav a{
+    color: #F3FCFF;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    transition: ease-in-out 0.6s;
+    text-decoration: none;
+}
+.footerNav a:hover{
+    transition: 0.6s;
+    color: #CDF3FF;
+    text-shadow: 3px 3px 8px #CDF3FF;
+}
+.footerContacts{
+    width: 18vw;
+    color: #F3FCFF;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+.footerLogo img{
+    margin-top: 2vh;
+    width: 12vw;
+}
+.copyright{
+    color: #CDF3FF;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5vh;
+}
+
+.burgerMenu{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    z-index: 9999;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.8s;
+}
+.burgerMenu.opened{
+    visibility: visible;
+    transition: 0.8s;
+    position: absolute;
+    width: 100%;
+    background: #1B1A1A;
+    right: 0;
+    height: 100%;
+    animation: show 1s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+.burgerMenu.hide{
+    transition: 0.8s;
+    animation: hide 1s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show {
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes hide {
+    from{
+        opacity: 1;
+    }
+    to{
+        width: 0%;
+        opacity: 0;
+    }
+}
+
+.burgerMenu ul{
+    list-style-type: none;
+}
+.burgerMenu ul > li{
+    margin-left: 0;
+    margin-top: 2vh;
+    text-align: center;
+
+}
+.burgerMenu a{
+    color: #CDF3FF;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.off{
+    display: none;
+    transition: 0.5s;
+}
+.hide{
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.menuButton {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    display: none; 
+  }
+  .burgerMenuButton {
+    width: 35px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+    transition: all .5s ease-in-out;
+  }
+  .burgerMenuButton::before,
+  .burgerMenuButton::after {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+    transition: all .5s ease-in-out;
+  }
+  .burgerMenuButton::before {
+    transform: translateY(-16px);
+  }
+  .burgerMenuButton::after {
+    transform: translateY(16px);
+  }
+  .menuButton.open .burgerMenuButton {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menuButton.open .burgerMenuButton::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menuButton.open .burgerMenuButton::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+  .modalWindowBackground, .authModalWindowBackground{
+    z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+  }
+  .modalWindow, .authModalWindow{
+    z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      position: relative;
+      background: #121212;
+      border: 1px solid #E4F9FF;
+      display: flex;
+      flex-flow: column;
+      width: 22vw;
+      min-width: 270px;
+      padding: 3vh 4vw 3vh 4vw;
+  }
+  .authModalWindow{
+    width: 17vw;
+  }
+  .modalWindow input, .authModalWindow input{
+      width: 100%;
+      height: 3vh;
+    min-height: 25px;
+      background: #E4F9FF;
+      border: 1px solid #000000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 13px;
+        margin-top: 0.75vh;
+        margin-bottom: 1.4vh;
+  }
+  .closeModalWindow, .closeAuthModalWindow{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    color: #FFFFFF;
+  }
+  .modalWindow span, .authModalWindow span{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px; 
+    color: #FFFFFF;
+}
+.modalWindow p, .authModalWindow p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;   
+    color: #FFFFFF;
+    margin-bottom: 0;  
+}
+.modalWindow button, .authModalWindow button{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    align-self: center;
+    width: 65%;
+    height: 5vh;
+    min-height: 35px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;   
+    color: #FFFFFF;
+    background: transparent;
+    margin-bottom: 0; 
+    border: 2px solid #E4F9FF;
+    box-sizing: border-box;
+    border-radius: 15px;  
+}
+.authModalWindow button{
+    width: 45%;
+    align-self: flex-end;
+}
+.modalLine{
+    width: 60%;
+    height: 2px;
+    background: #E4F9FF;
+    margin: 1.5vh 0vw 4vh 0vw;
+    align-self: center;
+}
+
+.modalWindow.opened, .modalWindowBackground.opened, .authModalWindow.opened, .authModalWindowBackground.opened{
+    visibility: visible;
+    transition: 0.8s;
+    animation: show 1s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+.modalWindow.hide, .modalWindowBackground.hide, .authModalWindow.hide, .authModalWindowBackground.hide{
+    transition: 0.8s;
+    animation: hide 1s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+.isHaveAccount{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.isHaveAccount a{
+    color: #E4F9FF;
+    font-size: 24px;
+    margin-left: 1vw;
+}
+.isForgetPassword{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 8vh;
+    margin-bottom: 3vh;
+}
+
+@media screen and (max-width:1440px) {
+    .modalWindow p, .authModalWindow p{
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .modalWindow span, .authModalWindow span{
+        font-size: 14px;
+    }
+    .modalWindow button, .authModalWindow button{
+        font-size: 14px;
+    }
+    .banner h1{
+        font-size: 26px;
+    }
+    .infoblockContent a{
+        font-size: 15px;
+    }
+    .watchCollectionButton, .buy, .orderButton{
+        font-size: 14px;
+    }
+    .infoblockContent h1, .newModelsWrap h1, .bestModelsWrap h1, .partnersWrap h1, .socMediasWrap h1{
+        font-size: 22px;
+        text-align: center;
+    }
+    .bestModelsWrap h1{
+        margin-top: 3vh;
+        margin-bottom: 4vh;
+    }
+    .infoblockContent p{
+        font-size: 14px;
+        text-align: center;
+    }
+    .footerNav{
+        padding-left: 0;
+    }
+    .footerNav a{
+        font-size: 14px;
+    }
+    .footerContacts p{
+        font-size: 14px;
+    }
+    .sliderArrow img{
+        width: 25px;
+    }
+
+    .modalWindow span{
+        font-size: 16px; 
+    }
+}
+
+@media screen and (max-width:1024px) {  
+    .bestModel1{
+        display: none;
+    }
+    .bestModel3{
+        display: none;
+    }
+    .bestModel2{
+        width: 40vw;
+        margin-top: 10vh;
+    }
+    .sliderArrow{
+        margin-top: 2vh;
+    }
+    .sliderPoints{
+        display: none;
+    }
+    .bestModels{
+        margin-top: -10px;
+    }
+
+    .infoblockContent{
+        width: 80vw;
+    }
+    .newModel, .bestModel{
+        width: 18vw;
+        min-width: 220px;
+        margin: 3vw;
+    }
+    .newModel img, .bestModel img{
+        width: 25vw;
+        min-width: 220px;
+        max-height: 370px;
+    }
+    .newModelsWrap h1{
+        margin-top: 4vh;
+        margin-bottom: 5vh;
+    }
+
+    .header{
+        justify-content: space-between;
+    }
+    .leftNav a, .rightNav a{
+        font-size: 1.9vw;
+    }
+    .banner h1{
+        font-size: 22px;
+    }
+    .aboutUs{
+        margin-right: 9vw;
+    }
+    .logo{
+        margin-left: 5vw;
+        min-width: 100px;
+    }
+
+    .isForgetPassword{
+        font-size: 18px;
+    }
+
+}
+@media screen and (max-width:768px) {
+    .menuButton{
+        display: block;
+    }
+    .leftNav, .rightNav{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .newModels{
+        flex-flow: column;
+    }
+    .bestModel{
+        margin-top: 10vw;
+    }
+    .banner h1{
+        font-size: 20px;
+    }
+    .infoblockContent a{
+        font-size: 15px;
+    }
+    .watchCollectionButton, .buy, .orderButton{
+        font-size: 14px;
+    }
+    .infoblockContent h1, .newModelsWrap h1, .bestModelsWrap h1, .partnersWrap h1, .socMediasWrap h1{
+        font-size: 18px;
+        text-align: center;
+    }
+    .bestModelsWrap h1{
+        margin-top: 3vh;
+        margin-bottom: 4vh;
+    }
+    .infoblockContent p{
+        font-size: 14px;
+        text-align: center;
+    }
+    .footerNav{
+        padding-left: 0;
+    }
+    .footerNav a{
+        font-size: 14px;
+    }
+    .footerContacts p{
+        font-size: 14px;
+    }
+    .twitter, .instagram, .facebook, .google, .pinterest{
+        width: 30px;
+        height: 30px;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+    .sliderArrow img{
+        width: 20px;
+    }
+    .footer{
+        justify-content: center;
+        margin-left: 0vw;
+    }
+    .footerNav{
+        margin:0vh 5vw 0vh 5vw;
+    }
+}
+
+@keyframes appearLeft {
+    from{
+        opacity: 0;
+        left: -100%;
+    }
+    to{
+        opacity: 1;
+        left: 0;
+    }
+}
+@keyframes appearRight {
+    from{
+        opacity: 0;
+        left: 600%;
+    }
+    to{
+        opacity: 1;
+        left: 0;
+    }
+}

@@ -1,0 +1,193 @@
+@import url(main.css);
+
+.wrap{
+    background: #1B1A1A;
+}
+.header{
+    background: #1B1A1A;
+}
+.contentWrap{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+.contentWrap h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.7vw;   
+    color: #FFFFFF;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+.shopCartItemLine{
+    height: 4px;
+    width: 70vw;
+    background: #FFFFFF;
+}
+.miniShopCartItemLine{
+    height: 4px;
+    width: 50vw;
+    background: #FFFFFF;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+}
+.shopCartItem{
+    display: flex;
+    margin:4vh 0 4vh 0;
+    align-self: flex-start;
+    margin-left: 19vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin-right: 13vw; */
+}
+.shopCartItemHolder{
+    width: 15vw;
+    min-width: 230px;
+    background: #E4F9FF;
+    box-shadow: 0px 6px 25px rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shopCartItemHolder img{
+    width: 11vw;
+    min-width: 190px;
+}
+.shopCartInfoHolder{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    margin:0vh 0vw 0vh 4.5vw;
+    width: 40%;
+    min-width: 400px;
+}
+.shopCartInfoHolder h3, .totalPriceWrap{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4vw;
+    color: #E4F9FF;
+    margin:0vh 0vw 0vh 0vw;
+}
+.shopCartInfoHolder p{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;  
+    width: 19vw;
+    min-width: 250px;
+    color: #FFFFFF;
+    margin:3.5vh 0vw 7vh 0vw;
+}
+.shopCartInfoHolder span{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6vw;  
+    color: #53D9FF;
+}
+.shopCartAmount{
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+.shopCartAmount p{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.15vw;
+    color: #FFFFFF;
+    margin: 0;
+}
+.shopCartAmount span{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    color: #FFFFFF;
+}
+.shopCartAmount img{
+    margin:0 2vw 0 2vw; 
+}
+.totalPrice{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vw;
+    color: #53D9FF;  
+}
+.removeFromShoppingCart{
+    font-size: 18px;
+    color: red;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1vh;
+}
+.orderButton{
+    cursor: pointer;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+.setMinus{
+    cursor: pointer;
+}
+.setPlus{
+    cursor: pointer;
+}
+
+@media screen and (max-width:1439px) {
+    .contentWrap h1{
+        font-size: 24px;
+    }
+    .shopCartInfoHolder h3, .totalPriceWrap{
+        font-size: 22px;
+    }
+    .shopCartInfoHolder p{
+        font-size: 16px;
+    }
+    .shopCartInfoHolder span, .totalPrice{
+        font-size: 24px;
+    }
+    .shopCartAmount p{
+        font-size: 18px;
+    }
+    .shopCartAmount span{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:900px) {
+    .shopCartItemLine, .miniShopCartItemLine{
+       visibility: hidden;
+    }
+    .shopCartItem{
+        margin-left: 5vw;
+    }
+}
+@media screen and (max-width:768px) {
+    .shopCartItem{
+        margin-left: 0;
+        align-self: center;
+    }
+    .shopCartInfoHolder{
+        margin-left:0;
+    }
+    .shopCartInfoHolder span{
+       margin:0 auto;
+    }
+    .shopCartInfoHolder{
+        align-items: center;
+        text-align: center;
+    }
+    .shopCartAmount{
+        align-self: flex-start;
+    }
+}
+@media screen and (max-width:649px) {
+    .shopCartInfoHolder{
+        margin-top: 5vh;
+    }
+
+}
